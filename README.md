@@ -1,3 +1,5 @@
-# Business Analytics Hypothetical Case Study
-Provide business analysis for a fictional Credit Startup
+## **Business Analytics Hypothetical Case Study**
+*Business analysis for a fictional Credit Startup*
 ----------
+
+
