@@ -3,7 +3,7 @@ Analyzing the state of a fictional credit startup called *Credit Up For All*
 
 ---------------
 
-By considering the state of the business, first, we will study the startup's profitability, net income, and other aspects for the following 12 months. After analyzing the Contigo products, we will analyze a strategy for Contigo A customers to render this customer segment profitable.
+By considering the state of the business, first, this analysis aims to study the startup's profitability, net income, and other aspects for the following 12 months. After analyzing the Contigo products, we will analyze a strategy for Contigo A customers to render this customer segment profitable.
 
 *The data and the case study were taken from a test to apply for a position in the Business Analytics team in a company. Some information was modified.*
 
@@ -43,12 +43,19 @@ Description of collection strategy
 
 The Credit department has decided to prioritize collections on Contigo A customers, since they have the largest DQ rate. A collections analyst has determined that a DQ rate of 10% will be enough to render this customer segment profitable. The team has decided to apply immediate action from month 1 and is looking for a collection strategy to recover (at least!) 175 of the 675 accounts that went delinquent, out of the starting 5,000 Contigo A accounts.
 
-One idea is to collect by calling the customer. Using the collection results, the data science team has created a model to estimate contactability (i.e. the probability of reaching the customer successfully by calling). The collections team estimates that the customer will pay around three quarters of the time after being contacted, and it has no chance to pay if they never connect the call. Calling the customer is quite expensive! Operations has determined that a phone call campaign costs around 30 pesos per DQ customer, regardless of the contact result. The contactability scores are available in the ".csv" file 
+One idea is to collect by calling the customer. Using the collection results, the data science team has created a model to estimate contactability (i.e. the probability of reaching the customer successfully by calling). The collections team estimates that the customer will pay around three quarters of the time after being contacted, and it has no chance to pay if they never connect the call. Calling the customer is quite expensive! Operations has determined that a phone call campaign costs around 30 pesos per DQ customer, regardless of the contact result. The contactability scores are available in the "contactability_scores.csv" file 
 
 *Analysis of a collection strategy, part 2.*
 
 The startup wants to launch this campaign to all 675 DQ customers. We aim to compute the probable results for some main KPIs, such as recovered accounts, total debt recovered, revenue coming from collected interest, and so on. We will also analyze the impact this campaign has on overall business performance. Finally, we will suggest some possible improvements for this campaign.
 
-The analysis needed for this part was performed in SQL and the results were resumed in a dashboard made in the ".xls" file.
+The analysis needed for this part was performed in "Analysis_of_collection_strategy.sql" and the results were resumed in a dashboard in the "Analysis of collection strategy_resume.xls" file.
+
+Results
+
+---------------
 
 
+Part 1
+
+Part 2 
