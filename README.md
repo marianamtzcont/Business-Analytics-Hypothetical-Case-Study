@@ -67,6 +67,7 @@ Based on the analysis done, we are able to determine:
 
 
 *Analysis of a collection strategy*
+
 Based on the analysis done, we were able to determine the campaign results which are summed in the below visualization.
  
 
