@@ -58,7 +58,15 @@ Results
 
 Part 1
 
+Based on the analysis done, we are able to determine: 
 
-![net_income.png](attachment:net_income.png)
+- The Startup is not going to be profitable not even in the first month.The forecast shows it is necessary to apply immediate changes. The main trends driving changes in net income are interest rates which seems to be too low and affecting profitability. Another trend is the composition of the credit portfolio rates of the accounts. Also, delinquency rates are affecting interest income and loan losses.
+
+- The company is experiencing losses, and starting from month 6, it has more customers in product A compared to product B, which exposes it to higher potential losses due to defaults. Since Contigo A customers are considered high-risk and have high delinquency rates, the rapid increase in the number of Contigo A customers results in the acquisition of high-risk clients, as reflected in the composition of the credit provided which by month 10, the company would be lending the same amount of money for both products
+
+
 
 Part 2 
+Based on the analysis done, we were able to determine the campaign results which are summed in the below visualization.
+ 
+
