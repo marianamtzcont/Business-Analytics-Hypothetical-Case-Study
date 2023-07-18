@@ -1,0 +1,96 @@
+/*
+				Analysis of a collection strategy Contigo A accounts
+		
+	Two scenarios were considered
+
+	A. Spliting the data into three equal categories base on the contactability scores - high, medium and 
+	low probability of response -. Consider the high and medium probability accounts to estimate the KPIs
+
+	B. Considering only the acounts with a contactability score above the mean - 0.42-.
+
+*/ 
+
+-- Create the database and the table
+DROP TABLE IF EXISTS "contactability_scores";
+CREATE TABLE contactability_scores
+(    customer_id INT,
+    contactability_score DECIMAL,
+    total_debt INT,
+    interest INT);
+	
+-- Ordering the data by contactability scores 
+SELECT *
+FROM contactability_scores
+ORDER BY contactability_score ASC;
+
+-- Getting the avg and std 
+SELECT AVG(contactability_score) AS avg_contactability,
+STDDEV(contactability_score) as desv_est
+FROM contactability_scores;
+----- Scenario A 
+-- Partition the data into three equal parts. 
+-- There are 225 accounts in each category
+WITH Thirds AS (
+SELECT customer_id, contactability_score,
+NTILE(3) OVER(ORDER BY contactability_score DESC) AS third
+FROM contactability_scores)
+SELECT third, round(AVG(contactability_score),2) AS AVG_contactability_score,
+COUNT(third), MIN(contactability_score),MAX(contactability_score)
+FROM Thirds
+GROUP BY third
+ORDER BY third;
+
+-- Label categories count the accounts 
+WITH categories as (SELECT customer_id,contactability_score,
+CASE when contactability_score >= 0.553 THEN 'high'
+	  when contactability_score <= 0.23 THEN 'low'
+	  ELSE 'medium' END AS contactability_rank
+FROM contactability_scores)
+SELECT count(*)
+FROM categories
+WHERE contactability_rank in ('high','medium');
+-- 
+-- Estimating the KPIs 
+WITH categories as (SELECT customer_id,contactability_score,
+CASE when contactability_score >= 0.553 THEN 'high'
+	  when contactability_score <= 0.23 THEN 'low'
+	  ELSE 'medium' END AS contactability_rank
+FROM contactability_scores)
+SELECT ROUND(count(*)*0.75,0) as recovered_accounts, 
+	ROUND(count(*)*0.75,0)*1000 AS recovered_total_debt, 
+	ROUND(count(*)*0.75,0)*150 AS revenue
+FROM categories
+WHERE contactability_rank in ('high','medium');
+
+-- Estimating the total campaing cost 
+SELECT count(*)*30
+FROM contactability_scores;
+-- Estimating the DQ losses coming from uncollected total debt 
+WITH categories as (SELECT customer_id,contactability_score,
+CASE when contactability_score >= 0.553 THEN 'high'
+	  when contactability_score <= 0.23 THEN 'low'
+	  ELSE 'medium' END AS contactability_rank
+FROM contactability_scores)
+SELECT 675- ROUND(count(*)*0.75,0) AS non_recovered_accounts,
+(675- ROUND(count(*)*0.75,0))*1000 AS DQ_losses
+FROM categories
+WHERE contactability_rank in ('high','medium');
+
+----- Scenario B
+-- Estimating the KPIs 
+SELECT count(*) as contacted_accounts,
+	ROUND(count(*)*0.75,0) as recovered_accounts, 
+	ROUND(count(*)*0.75,0)*1000 AS recovered_total_debt, 
+	ROUND(count(*)*0.75,0)*150 AS revenue
+FROM contactability_scores
+WHERE contactability_score >= 0.4150;
+-- Estimating the total campaing cost 
+SELECT count(*)*30
+FROM contactability_scores;
+-- Estimating the DQ losses coming from uncollected total debt 
+SELECT 675- ROUND(count(*)*0.75,0) AS non_recovered_accounts,
+		(675- ROUND(count(*)*0.75,0))*1000 AS DQ_losses
+FROM contactability_scores
+WHERE contactability_score >= 0.4150;
+
+
