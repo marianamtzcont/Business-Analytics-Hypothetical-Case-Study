@@ -69,5 +69,6 @@ Based on the analysis done, we are able to determine:
 *Analysis of a collection strategy*
 
 Based on the analysis done, we were able to determine the campaign results which are summed in the below visualization.
- 
+
+ ![results](https://github.com/marianamtzcont/Business-Analytics-Hypothetical-Case-Study/blob/main/Analysis%20of%20collection%20strategy_.png)
 
