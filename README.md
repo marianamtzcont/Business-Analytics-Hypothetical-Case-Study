@@ -58,4 +58,7 @@ Results
 
 Part 1
 
+
+![net_income.png](attachment:net_income.png)
+
 Part 2 
