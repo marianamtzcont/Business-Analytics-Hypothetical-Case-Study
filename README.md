@@ -64,7 +64,7 @@ Based on the analysis done, we are able to determine:
 
 - The company is experiencing losses, and starting from month 6, it has more customers in product A compared to product B, which exposes it to higher potential losses due to defaults. Since Contigo A customers are considered high-risk and have high delinquency rates, the rapid increase in the number of Contigo A customers results in the acquisition of high-risk clients, as reflected in the composition of the credit provided which by month 10, the company would be lending the same amount of money for both products
 
-
+![net income](https://github.com/marianamtzcont/Business-Analytics-Hypothetical-Case-Study/blob/main/net_income.png)
 
 *Analysis of a collection strategy*
 
