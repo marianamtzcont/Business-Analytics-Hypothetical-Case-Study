@@ -8,7 +8,7 @@ By considering the state of the business, first, we will study the startup's pro
 After analyzing the Contigo products, we will analyze a strategy for Contigo A customers to render this customer segment profitable.
 
 
-*The data and the case study were taken from a test to apply for a position in the Business Analytics team in a company. Some information was modified. 
+*The data and the case study were taken from a test to apply for a position in the Business Analytics team in a company. Some information was modified.*
 
 
 
