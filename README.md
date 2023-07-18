@@ -51,7 +51,7 @@ The startup wants to launch this campaign to all 675 DQ customers. We aim to com
 
 The analysis needed for this part was performed in "Analysis_of_collection_strategy.sql" and the results were resumed in a dashboard in the "Analysis of collection strategy_resume.xls" file.
 
-Results
+#### Results
 
 ---------------
 
