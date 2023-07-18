@@ -9,7 +9,7 @@ By considering the state of the business, first, this analysis aims to study the
 
 
 
-Business description 
+#### Business description 
 
 ---------------
 
@@ -36,7 +36,7 @@ The startup is concerned that the change in DQ rates and the aggressive expansio
 
 These questions and the explanation are shown in the "Business Analytics Hypothetical Case Study.py" file 
 
-Description of collection strategy 
+#### Description of collection strategy 
 
 ---------------
 
@@ -56,7 +56,7 @@ The analysis needed for this part was performed in "Analysis_of_collection_strat
 ---------------
 
 
-Part 1
+*Business analysis*
 
 Based on the analysis done, we are able to determine: 
 
@@ -66,7 +66,7 @@ Based on the analysis done, we are able to determine:
 
 
 
-Part 2 
+*Analysis of a collection strategy*
 Based on the analysis done, we were able to determine the campaign results which are summed in the below visualization.
  
 
